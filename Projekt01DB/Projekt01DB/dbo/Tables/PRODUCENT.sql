@@ -8,8 +8,12 @@
     [Adres]            NVARCHAR (100) NOT NULL,
     [PanstwoISO]       NVARCHAR (3)   NULL,
     [LiczbaSiedzib]    INT            NOT NULL,
-    PRIMARY KEY CLUSTERED ([FirmaId] ASC)
+    [ProduktID]        INT            NULL,
+    PRIMARY KEY CLUSTERED ([FirmaId] ASC),
+    FOREIGN KEY ([ProduktID]) REFERENCES [dbo].[PRODUKT] ([ProduktId])
 );
+
+
 
 
 
